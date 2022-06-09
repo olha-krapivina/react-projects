@@ -1,10 +1,12 @@
 import posts from "./posts.json";
 import PostList from "./components/PostList";
+import Registration from "./components/Regisration";
 
 function App() {
   return (
     <div>
-      <PostList posts={posts} />
+      <Registration />
+      {/* <PostList posts={posts} /> */}
     </div>
   );
 }
