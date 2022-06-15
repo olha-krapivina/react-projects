@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import { useState } from "react";
 
-function Regisration() {
+function Regisration({ onClose }) {
   const [userName, setUserName] = useState("");
 
   const onChangeUserName = function (event) {
@@ -25,8 +25,15 @@ function Regisration() {
     // });
   };
 
+  const onSubmit = (event) => {
+    event.preventDefault();
+    alert("Data sended");
+    onClose();
+  };
+
   return (
     <form
+      onSubmit={onSubmit}
       css={css`
         max-width: 300px;
         box-shadow: 0 0 5px 2px #0000004a;

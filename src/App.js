@@ -6,9 +6,11 @@ import Popup from "./components/Popup";
 function App() {
   return (
     <div>
-      <Popup buttonName="Add post" title="Enter post data">
-        <Registration />
-      </Popup>
+      <Popup
+        buttonName="Add post"
+        title="Enter post data"
+        ContentComponent={Registration}
+      ></Popup>
       {/* <PostList posts={posts} /> */}
     </div>
   );
